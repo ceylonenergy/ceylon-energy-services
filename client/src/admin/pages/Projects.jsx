@@ -5,8 +5,28 @@ import { IMAGE_ACCEPT, MAX_IMAGE_BYTES, shrinkImage } from '../lib/images.js';
 import { api, assetUrl, upload } from '../../lib/api.js';
 
 const BATCH = 20; // the server accepts up to 20 photos per request
+// Vercel rejects request bodies over 4.5MB, so a batch also stays under this.
+const BATCH_BYTES = 4 * 1024 * 1024;
 const base = (loc, proj) => `/api/admin/gallery/locations/${loc.id}${proj ? `/projects/${proj.id}` : ''}`;
 const plural = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`;
+
+/** Split files into upload batches of at most BATCH files and BATCH_BYTES (a bigger single file goes alone). */
+function toBatches(files) {
+  const batches = [];
+  let current = [];
+  let bytes = 0;
+  for (const file of files) {
+    if (current.length && (current.length === BATCH || bytes + file.size > BATCH_BYTES)) {
+      batches.push(current);
+      current = [];
+      bytes = 0;
+    }
+    current.push(file);
+    bytes += file.size;
+  }
+  if (current.length) batches.push(current);
+  return batches;
+}
 
 export default function Projects() {
   const [locations, setLocations] = useState(null);
@@ -189,11 +209,11 @@ function ProjectBlock({ loc, proj, index, count, onMove, onChange, run }) {
           if (small.size > MAX_IMAGE_BYTES) throw new Error(`"${file.name}" is still larger than 10MB. Please use a smaller photo.`);
           files.push(small);
         }
-        const batches = Math.ceil(files.length / BATCH);
-        for (let b = 0; b < batches; b++) {
+        const batches = toBatches(files);
+        for (let b = 0; b < batches.length; b++) {
           const form = new FormData();
-          files.slice(b * BATCH, (b + 1) * BATCH).forEach((f) => form.append('photos', f));
-          const res = await upload(`${url}/photos`, form, { onProgress: (p) => setProgress((b + p) / batches) });
+          batches[b].forEach((f) => form.append('photos', f));
+          const res = await upload(`${url}/photos`, form, { onProgress: (p) => setProgress((b + p) / batches.length) });
           onChange(res.location);
         }
       } finally {

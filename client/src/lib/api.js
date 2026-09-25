@@ -35,10 +35,13 @@ async function parse(res) {
     body = null;
   }
   if (!res.ok || body?.ok === false) {
+    // A 413 without our JSON comes from the host in front of the API (Vercel caps requests at 4.5MB).
     const fallback =
       res.status === 0 || res.status >= 502
         ? 'The server is not responding. Please try again in a moment.'
-        : `Request failed (HTTP ${res.status}).`;
+        : res.status === 413
+          ? 'This upload is larger than the hosting service accepts in one request.'
+          : `Request failed (HTTP ${res.status}).`;
     throw new ApiError(body?.error || fallback, res.status, body);
   }
   return body;

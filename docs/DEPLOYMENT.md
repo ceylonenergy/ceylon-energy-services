@@ -156,6 +156,54 @@ Updating later: `git pull && npm ci && npm run build && pm2 restart ceylon-energ
 
 ---
 
+## Option D — Vercel
+
+Vercel does not run `npm start`. It serves the built website from its
+CDN and runs the API as a serverless function. The repository already
+has the files for this: `vercel.json`, `api/index.js` and
+`server/index.js`.
+
+1. [vercel.com](https://vercel.com) → **Add New → Project** → import this repository.
+2. **Root Directory: leave it as the repository root (`./`)**, not
+   `server` or `client`. `vercel.json` sets the build command, the output
+   folder and the framework, and sends `/api/*` to the API. The website
+   and the API then share one address, so the admin login cookie works in
+   every browser.
+3. **Environment Variables**: add the production settings above.
+   Leave out `PORT`. Vercel only applies a changed variable to new
+   deployments, so **Redeploy** after editing one.
+4. Atlas → **Network Access** → **Add IP Address** → **Allow access from
+   anywhere** (`0.0.0.0/0`). Vercel has no fixed IP address, so Atlas
+   refuses it otherwise. The password in `MONGODB_URI` still protects the
+   database.
+5. Deploy. Open `https://<your-project>.vercel.app/api/health`. You should
+   see `"mongo":"connected"`.
+6. Run `npm run seed` and `npm run create-admin` on your own computer,
+   with `.env` pointing at the same Atlas database.
+
+**Limits on Vercel.** A request can be at most 4.5 MB. The admin panel
+sends photos in batches under that size, so gallery uploads work (a
+single PNG over 4.5 MB does not). **Replacing the Company Profile PDF
+(~26 MB) and very large award images cannot work on Vercel.** Do those
+from the admin panel on your own computer (`npm run dev` with the same
+`.env`): it writes to the same Atlas database and Cloudinary, so the live
+site shows the change straight away. The login and contact-form rate
+limits are counted separately by each running copy of the function.
+
+| What you see | Fix |
+|---|---|
+| `500 FUNCTION_INVOCATION_FAILED` on every page | The function crashed while loading. **Logs** on the deployment page shows why |
+| `"The server is missing required settings"` with a `problems` list | Add those variables (step 3), then Redeploy |
+| `503` `"could not connect to the database"` | Atlas Network Access (step 4) or the password in `MONGODB_URI`. The **Logs** show the exact error |
+| The site loads but `/admin` or `/api/...` gives 404 | Root Directory is `client` or `server`. Set it back to the repository root |
+| `"This upload is larger than the hosting service accepts"` | The 4.5 MB limit above |
+
+A project whose Root Directory is `server` runs the API alone, using
+`server/index.js`. The website must then be hosted somewhere else (see
+the last section).
+
+---
+
 ## After going live
 
 1. `https://<your-domain>/api/health` shows `"ok":true` and `"mongo":"connected"`.

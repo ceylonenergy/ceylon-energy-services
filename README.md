@@ -69,12 +69,16 @@ Open **http://localhost:5173** for the website and
 ## Putting it online
 
 See **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** — step-by-step for Render,
-cPanel ("Setup Node.js App") and a plain VPS. In short: set the same
+cPanel ("Setup Node.js App"), a plain VPS and Vercel. In short: set the same
 variables as your `.env` on the host, then
 
 ```bash
 npm install && npm run build && npm start
 ```
+
+Vercel is the exception: it never runs `npm start`. Import the repository
+with the Root Directory left at the repository root and `vercel.json`
+does the rest. See [Option D](docs/DEPLOYMENT.md#option-d--vercel).
 
 ---
 
@@ -90,6 +94,7 @@ client/                 React app (Vite)
     lib/                API client
     styles/             main.css (the site's original stylesheet), admin.css
 server/                 Express API
+  index.js              entry point on Vercel (src/server.js everywhere else)
   src/
     config/             settings, MongoDB, Cloudinary
     models/             Admin, Location (gallery), Award, Document, Message
@@ -100,6 +105,8 @@ server/                 Express API
   seed-data/            the old site's content, imported by `npm run seed`
   test/                 integration tests
 docs/                   migration plan, deployment guide
+api/index.js            Vercel only: the API as one serverless function
+vercel.json             Vercel only: build settings and /api routing
 ```
 
 ## What the admin panel manages
