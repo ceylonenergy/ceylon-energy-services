@@ -1,0 +1,213 @@
+[
+    {
+        "id": "loc-rathnapura",
+        "name": "Rathnapura",
+        "createdAt": "2026-09-05T08:36:09.357658+00:00",
+        "projects": [
+            {
+                "id": "proj-belihuloya-project-01",
+                "name": "Belihuloya project 01",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-rathnapura/proj-belihuloya-project-01/photo-005.png",
+                    "assets/images/completed-projects/loc-rathnapura/proj-belihuloya-project-01/photo-006.png",
+                    "assets/images/completed-projects/loc-rathnapura/proj-belihuloya-project-01/photo-007.png",
+                    "assets/images/completed-projects/loc-rathnapura/proj-belihuloya-project-01/photo-008.png"
+                ]
+            },
+            {
+                "id": "proj-belihuloya-project-02",
+                "name": "Belihuloya project 02",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-rathnapura/proj-belihuloya-project-02/photo-005.png",
+                    "assets/images/completed-projects/loc-rathnapura/proj-belihuloya-project-02/photo-006.png",
+                    "assets/images/completed-projects/loc-rathnapura/proj-belihuloya-project-02/photo-007.png",
+                    "assets/images/completed-projects/loc-rathnapura/proj-belihuloya-project-02/photo-008.png"
+                ]
+            },
+            {
+                "id": "proj-sabaragamuwa-university",
+                "name": "Sabaragamuwa University",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-rathnapura/proj-sabaragamuwa-university/photo-005.png",
+                    "assets/images/completed-projects/loc-rathnapura/proj-sabaragamuwa-university/photo-006.png",
+                    "assets/images/completed-projects/loc-rathnapura/proj-sabaragamuwa-university/photo-007.png",
+                    "assets/images/completed-projects/loc-rathnapura/proj-sabaragamuwa-university/photo-008.png"
+                ]
+            },
+            {
+                "id": "proj-udawalawa-project",
+                "name": "Udawalawa project",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-rathnapura/proj-udawalawa-project/photo-001.png",
+                    "assets/images/completed-projects/loc-rathnapura/proj-udawalawa-project/photo-002.png",
+                    "assets/images/completed-projects/loc-rathnapura/proj-udawalawa-project/photo-003.png"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "loc-colombo",
+        "name": "Colombo",
+        "createdAt": "2026-09-05T08:36:09.357658+00:00",
+        "projects": [
+            {
+                "id": "proj-project-01",
+                "name": "Project 01",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-colombo/proj-project-01/photo-008.png",
+                    "assets/images/completed-projects/loc-colombo/proj-project-01/photo-002.png",
+                    "assets/images/completed-projects/loc-colombo/proj-project-01/photo-003.png",
+                    "assets/images/completed-projects/loc-colombo/proj-project-01/photo-004.png",
+                    "assets/images/completed-projects/loc-colombo/proj-project-01/photo-005.png"
+                ]
+            },
+            {
+                "id": "proj-project-02",
+                "name": "Project 02",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-colombo/proj-project-02/photo-004.png",
+                    "assets/images/completed-projects/loc-colombo/proj-project-02/photo-005.png",
+                    "assets/images/completed-projects/loc-colombo/proj-project-02/photo-006.png"
+                ]
+            },
+            {
+                "id": "proj-project-03",
+                "name": "Project 03",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-colombo/proj-project-03/photo-004.png",
+                    "assets/images/completed-projects/loc-colombo/proj-project-03/photo-005.png",
+                    "assets/images/completed-projects/loc-colombo/proj-project-03/photo-006.png"
+                ]
+            },
+            {
+                "id": "proj-wellampitiya",
+                "name": "Wellampitiya",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-colombo/proj-wellampitiya/photo-004.png",
+                    "assets/images/completed-projects/loc-colombo/proj-wellampitiya/photo-005.png",
+                    "assets/images/completed-projects/loc-colombo/proj-wellampitiya/photo-006.png"
+                ]
+            },
+            {
+                "id": "proj-moratuwa",
+                "name": "Moratuwa",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": []
+            },
+            {
+                "id": "proj-microchip-solution-moratuwa",
+                "name": "Microchip Solution - Moratuwa",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-colombo/proj-microchip-solution-moratuwa/photo-006.png",
+                    "assets/images/completed-projects/loc-colombo/proj-microchip-solution-moratuwa/photo-007.png",
+                    "assets/images/completed-projects/loc-colombo/proj-microchip-solution-moratuwa/photo-008.png",
+                    "assets/images/completed-projects/loc-colombo/proj-microchip-solution-moratuwa/photo-009.png",
+                    "assets/images/completed-projects/loc-colombo/proj-microchip-solution-moratuwa/photo-010.png"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "loc-gampaha",
+        "name": "Gampaha",
+        "createdAt": "2026-09-05T08:36:09.357658+00:00",
+        "projects": [
+            {
+                "id": "proj-wattala-i-c-m-perera-s-site",
+                "name": "Wattala (I C M Perera 's site) ",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-gampaha/proj-wattala-i-c-m-perera-s-site/photo-005.png",
+                    "assets/images/completed-projects/loc-gampaha/proj-wattala-i-c-m-perera-s-site/photo-006.png",
+                    "assets/images/completed-projects/loc-gampaha/proj-wattala-i-c-m-perera-s-site/photo-007.png",
+                    "assets/images/completed-projects/loc-gampaha/proj-wattala-i-c-m-perera-s-site/photo-008.png"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "loc-piliyandala",
+        "name": "piliyandala",
+        "createdAt": "2026-09-05T08:36:09.357658+00:00",
+        "projects": [
+            {
+                "id": "proj-b-c-d-mendis-s-site",
+                "name": "B C D Mendis 's site",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-piliyandala/proj-b-c-d-mendis-s-site/photo-004.png",
+                    "assets/images/completed-projects/loc-piliyandala/proj-b-c-d-mendis-s-site/photo-005.png",
+                    "assets/images/completed-projects/loc-piliyandala/proj-b-c-d-mendis-s-site/photo-006.png"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "loc-dehiwala",
+        "name": "Dehiwala",
+        "createdAt": "2026-09-05T08:36:09.357658+00:00",
+        "projects": [
+            {
+                "id": "proj-project-01",
+                "name": "Project 01",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-dehiwala/proj-project-01/photo-003.png",
+                    "assets/images/completed-projects/loc-dehiwala/proj-project-01/photo-004.png"
+                ]
+            },
+            {
+                "id": "proj-g-s-indika-perera-s-site",
+                "name": "G S Indika Perera's site",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-dehiwala/proj-g-s-indika-perera-s-site/photo-004.png",
+                    "assets/images/completed-projects/loc-dehiwala/proj-g-s-indika-perera-s-site/photo-005.png",
+                    "assets/images/completed-projects/loc-dehiwala/proj-g-s-indika-perera-s-site/photo-006.png"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "loc-kaluthara",
+        "name": "Kaluthara",
+        "createdAt": "2026-09-05T08:36:09.357658+00:00",
+        "projects": [
+            {
+                "id": "proj-project-01",
+                "name": "Project 01",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-kaluthara/proj-project-01/photo-003.png",
+                    "assets/images/completed-projects/loc-kaluthara/proj-project-01/photo-004.png"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "loc-bandaragama",
+        "name": "Bandaragama",
+        "createdAt": "2026-09-05T08:36:09.357658+00:00",
+        "projects": [
+            {
+                "id": "proj-project-01",
+                "name": "Project 01",
+                "createdAt": "2026-09-05T08:36:09.357658+00:00",
+                "photos": [
+                    "assets/images/completed-projects/loc-bandaragama/proj-project-01/photo-001.png",
+                    "assets/images/completed-projects/loc-bandaragama/proj-project-01/photo-002.png",
+                    "assets/images/completed-projects/loc-bandaragama/proj-project-01/photo-003.png"
+                ]
+            }
+        ]
+    }
+]

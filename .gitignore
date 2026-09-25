@@ -1,0 +1,25 @@
+# Dependencies — installed by `npm install`, never committed
+node_modules/
+
+# Secrets — create .env from .env.example on each machine / server
+.env
+.env.*
+!.env.example
+
+# Build output — produced by `npm run build`
+client/dist/
+
+# Upload scratch space (multer writes here briefly before storage)
+server/tmp/
+
+# Logs and tooling
+*.log
+npm-debug.log*
+coverage/
+.vite/
+
+# OS / editor clutter
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

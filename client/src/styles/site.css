@@ -1,0 +1,67 @@
+/*
+ * Small additions to main.css (which is the original site stylesheet,
+ * unchanged) for the React version.
+ */
+
+/* Gallery cards, award tiles and page thumbnails are real <button>s now,
+   so keyboards and screen readers can use them. Strip the browser's
+   default button look so they render exactly like the old <div>s. */
+button.album-card,
+button.proj-item,
+button.cp-item-media,
+button.pv-thumb {
+  appearance: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+/* Grid tiles fill their cell; page thumbnails keep main.css's fixed 52x70 size. */
+button.album-card,
+button.proj-item,
+button.cp-item-media {
+  width: 100%;
+}
+button.pv-thumb {
+  background: none;
+}
+button.proj-item,
+button.cp-item-media {
+  border: 0;
+}
+button.album-card:focus-visible,
+button.proj-item:focus-visible,
+button.cp-item-media:focus-visible,
+button.pv-thumb:focus-visible,
+.cp-launch-thumb:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Caption under an award in the lightbox (was an inline style). */
+.lightbox-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+/* Contact-form spam trap: present for bots, invisible to people. */
+.hp-field {
+  position: absolute !important;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#contactForm {
+  position: relative;
+}
