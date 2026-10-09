@@ -135,4 +135,4 @@ function createApp() {
 }
 
 // module.exports = { createApp, withoutBaseUri };
-module.exports = app;
+module.exports = createApp();
