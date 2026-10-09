@@ -134,4 +134,5 @@ function createApp() {
   return app;
 }
 
-module.exports = { createApp, withoutBaseUri };
+// module.exports = { createApp, withoutBaseUri };
+module.exports = app;
