@@ -62,6 +62,9 @@ function explainFailure(err, uri) {
   } else if (/whitelist|allowlist|Server selection timed out|ETIMEDOUT|ECONNREFUSED|ReplicaSetNoPrimary/i.test(msg)) {
     console.error('   Hint: Atlas did not answer. In Atlas -> Network Access, allow the IP address of this');
     console.error('   computer or server. Some office and public Wi-Fi networks also block port 27017.');
+    if (process.env.VERCEL) {
+      console.error('   Vercel has no fixed IP address to allow: add 0.0.0.0/0 (access from anywhere) instead.');
+    }
   }
 }
 
